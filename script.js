@@ -43,3 +43,32 @@ const params = new URLSearchParams(window.location.search);
 const type = params.get('enquiry');
 const select = document.getElementById('enquiryType');
 if (type && select) select.value = type;
+
+// Station search + status filters. Status options are Live, Coming Soon and Planned.
+const stationCards = document.querySelectorAll('.station-list-card[data-status]');
+const stationStatus = document.getElementById('stationStatus');
+const stationSearch = document.querySelector('.station-search input');
+const noStationsMessage = document.getElementById('noStationsMessage');
+function filterStations() {
+  if (!stationCards.length) return;
+  const status = stationStatus ? stationStatus.value : 'all';
+  const query = stationSearch ? stationSearch.value.trim().toLowerCase() : '';
+  let visible = 0;
+  stationCards.forEach(card => {
+    const matchesStatus = status === 'all' || card.dataset.status === status;
+    const matchesSearch = !query || (card.dataset.search || '').toLowerCase().includes(query);
+    const show = matchesStatus && matchesSearch;
+    card.hidden = !show;
+    if (show) visible++;
+  });
+  if (noStationsMessage) noStationsMessage.hidden = visible !== 0;
+}
+if (stationStatus) stationStatus.addEventListener('change', filterStations);
+if (stationSearch) stationSearch.addEventListener('input', filterStations);
+const resetStationFilters = document.querySelector('.filter-reset');
+if (resetStationFilters) resetStationFilters.addEventListener('click', () => {
+  if (stationStatus) stationStatus.value = 'all';
+  if (stationSearch) stationSearch.value = '';
+  filterStations();
+});
+filterStations();

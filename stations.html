@@ -26,7 +26,7 @@
   </div>
   <div class="station-filters">
     <div class="station-search">⌕ <input type="search" placeholder="Search station or location" aria-label="Search station or location"></div>
-    <select aria-label="Station status"><option>All Stations</option><option>Coming Soon</option><option>Planned</option></select>
+    <select id="stationStatus" aria-label="Station status"><option value="all">All Stations</option><option value="live">Live</option><option value="coming-soon">Coming Soon</option><option value="planned">Planned</option></select>
     <button class="filter-reset" type="button">↻ Reset</button>
   </div>
   <div class="locator-layout">
@@ -36,18 +36,19 @@
       <div class="map-note">Google Maps · Select a station card to use its exact navigation link.</div>
     </div>
     <div class="station-list">
-      <article class="station-list-card" data-search="perambalur ashwins perambalur">
+      <article class="station-list-card" data-status="coming-soon" data-search="perambalur ashwins perambalur">
         <div class="station-card-head"><span class="status">Coming Soon</span><span class="station-id">AC001</span></div>
         <div class="station-list-main"><div><p class="tag">PERAMBALUR · ASHWINS</p><h3>Perambalur – Ashwins</h3><p class="station-location">📍 Perambalur, Tamil Nadu</p></div><div class="station-power"><strong>60</strong><span>kW</span><small>DC Fast Charger</small></div></div>
         <div class="station-facilities"><span>☕ Café</span><span>🚻 Restroom</span><span>🅿️ Parking</span></div>
         <a class="btn btn-green station-btn" href="https://www.google.com/maps/dir/?api=1&destination=Ashwins%20Hotel%2C%20Perambalur%2C%20Tamil%20Nadu" target="_blank" rel="noopener">📍 Get Directions</a>
       </article>
-      <article class="station-list-card" data-search="thirumandurai thirumandurai highway trichy">
+      <article class="station-list-card" data-status="planned" data-search="thirumandurai thirumandurai highway trichy">
         <div class="station-card-head"><span class="status planned">Planned</span><span class="station-id">AC002</span></div>
         <div class="station-list-main"><div><p class="tag">THIRUMANDURAI · CHENNAI–TRICHY HIGHWAY</p><h3>Thirumandurai</h3><p class="station-location">📍 Thirumandurai, Tamil Nadu</p></div><div class="station-power"><strong>120</strong><span>kW</span><small>DC Fast Charger</small></div></div>
         <div class="station-facilities"><span>☕ Café</span><span>🚻 Restroom</span><span>🅿️ Parking</span></div>
         <a class="btn btn-green station-btn" href="https://www.google.com/maps/dir/?api=1&destination=11.3926667%2C78.9869722" target="_blank" rel="noopener">📍 Get Directions</a>
       </article>
+      <div class="stations-expanding" id="noStationsMessage" hidden><strong>No stations match this filter</strong><span>Try another status or view all stations.</span><a class="green-link" href="stations.html">View All Stations →</a></div>
       <div class="stations-expanding"><strong>More ArikCharge stations coming soon</strong><span>We're expanding across Tamil Nadu and beyond.</span><a class="green-link" href="index.html#partner">Have a Location? Partner With Us →</a></div>
     </div>
   </div>
