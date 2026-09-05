@@ -19,44 +19,40 @@
   <a class="btn btn-green" href="contact.html">Talk to Us</a><button class="menu-btn" aria-label="Open menu" aria-expanded="false">☰</button>
 </header>
 <main>
-<section class="station-hero"><div class="station-hero-content"><p class="eyebrow">OUR NETWORK</p><h1>Charge. <span>Travel.</span><br>Go Further.</h1><p>Discover ArikCharge stations designed for convenient, reliable EV charging along key travel corridors.</p></div></section>
-<section class="section">
-  <div class="section-heading"><div><p class="tag">CURRENT & UPCOMING</p><h2>Our Stations</h2><p>Each station includes a direct Google Maps route so drivers can navigate from wherever they are.</p></div></div>
-  <div class="station-grid">
-    <article class="station-card station-card-clean">
-      <div class="station-brand-panel">
-        <img src="assets/arikcharge-logo.png" alt="ArikCharge">
-        <div class="power-badge"><strong>60</strong><span>kW</span></div>
-        <span class="status">Coming Soon</span>
-      </div>
-      <div class="station-body">
-        <div class="station-top"><div><p class="tag">PERAMBALUR · ASHWINS</p><h3>Perambalur – Ashwins</h3></div><span class="charger-type">DC Fast Charger</span></div>
-        <p>Premium EV charging stop at Ashwins, Perambalur with convenient facilities for travellers.</p>
-        <div class="station-meta"><span>☕ Café</span><span>🚻 Restroom</span><span>🅿️ Parking</span></div>
+<section class="station-hero"><div class="station-hero-content"><p class="eyebrow">OUR STATIONS</p><h1>Find an <span>ArikCharge</span><br>station near you.</h1><p>Reliable charging. Better journeys. A cleaner tomorrow.</p></div></section>
+<section class="section stations-locator">
+  <div class="locator-heading">
+    <div><p class="tag">CURRENT & UPCOMING</p><h2>Our Stations</h2><p>Explore our charging network and get direct directions to every ArikCharge station.</p></div>
+  </div>
+  <div class="station-filters">
+    <div class="station-search">⌕ <input type="search" placeholder="Search station or location" aria-label="Search station or location"></div>
+    <select aria-label="Station status"><option>All Stations</option><option>Coming Soon</option><option>Planned</option></select>
+    <button class="filter-reset" type="button">↻ Reset</button>
+  </div>
+  <div class="locator-layout">
+    <div class="locator-map">
+      <div class="map-label"><strong>ArikCharge Network</strong><span>Our current & upcoming locations</span></div>
+      <iframe title="ArikCharge station map" src="https://www.google.com/maps?q=11.25,78.94&z=9&output=embed" loading="lazy"></iframe>
+      <div class="map-note">Google Maps · Select a station card to use its exact navigation link.</div>
+    </div>
+    <div class="station-list">
+      <article class="station-list-card" data-search="perambalur ashwins perambalur">
+        <div class="station-card-head"><span class="status">Coming Soon</span><span class="station-id">AC001</span></div>
+        <div class="station-list-main"><div><p class="tag">PERAMBALUR · ASHWINS</p><h3>Perambalur – Ashwins</h3><p class="station-location">📍 Perambalur, Tamil Nadu</p></div><div class="station-power"><strong>60</strong><span>kW</span><small>DC Fast Charger</small></div></div>
+        <div class="station-facilities"><span>☕ Café</span><span>🚻 Restroom</span><span>🅿️ Parking</span></div>
         <a class="btn btn-green station-btn" href="https://www.google.com/maps/dir/?api=1&destination=Ashwins%20Hotel%2C%20Perambalur%2C%20Tamil%20Nadu" target="_blank" rel="noopener">📍 Get Directions</a>
-      </div>
-    </article>
-    <article class="station-card station-card-clean">
-      <div class="station-brand-panel brand-blue">
-        <img src="assets/arikcharge-logo.png" alt="ArikCharge">
-        <div class="power-badge"><strong>120</strong><span>kW</span></div>
-        <span class="status planned">Planned</span>
-      </div>
-      <div class="station-body">
-        <div class="station-top"><div><p class="tag">THIRUMANDURAI · CHENNAI–TRICHY HIGHWAY</p><h3>Thirumandurai Highway Station</h3></div><span class="charger-type">DC Fast Charger</span></div>
-        <p>Highway charging destination in Thirumandurai, designed for fast and comfortable EV travel.</p>
-        <div class="station-meta"><span>☕ Café</span><span>🚻 Restroom</span><span>🅿️ Parking</span></div>
+      </article>
+      <article class="station-list-card" data-search="thirumandurai thirumandurai highway trichy">
+        <div class="station-card-head"><span class="status planned">Planned</span><span class="station-id">AC002</span></div>
+        <div class="station-list-main"><div><p class="tag">THIRUMANDURAI · CHENNAI–TRICHY HIGHWAY</p><h3>Thirumandurai</h3><p class="station-location">📍 Thirumandurai, Tamil Nadu</p></div><div class="station-power"><strong>120</strong><span>kW</span><small>DC Fast Charger</small></div></div>
+        <div class="station-facilities"><span>☕ Café</span><span>🚻 Restroom</span><span>🅿️ Parking</span></div>
         <a class="btn btn-green station-btn" href="https://www.google.com/maps/dir/?api=1&destination=11.3926667%2C78.9869722" target="_blank" rel="noopener">📍 Get Directions</a>
-      </div>
-    </article>
-    <article class="station-card station-coming station-card-clean">
-      <div class="station-brand-panel coming-panel"><img src="assets/arikcharge-logo.png" alt="ArikCharge"><div class="coming-mark">+</div></div>
-      <div class="station-body"><p class="tag">EXPANDING SOON</p><h3>More ArikCharge Stations</h3><p>New highway and destination charging stations will be added as the ArikCharge network grows.</p><a class="green-link" href="index.html#partner">Have a Location? Partner With Us →</a></div>
-    </article>
+      </article>
+      <div class="stations-expanding"><strong>More ArikCharge stations coming soon</strong><span>We're expanding across Tamil Nadu and beyond.</span><a class="green-link" href="index.html#partner">Have a Location? Partner With Us →</a></div>
+    </div>
   </div>
 </section>
-
 </main>
-<a class="whatsapp-float" href="https://wa.me/917094050996" target="_blank" rel="noopener" aria-label="Chat with ArikCharge on WhatsApp">◉</a>
-<footer><div class="footer-brand"><img src="assets/arikcharge-logo.png" alt="ArikCharge"></div><div class="footer-links"><a href="index.html">Home</a><a href="stations.html">Our Stations</a><a href="solutions.html">Our Solutions</a><a href="index.html#partner">Partner With Us</a><a href="about.html">About</a><a href="contact.html">Contact</a></div><div class="social"><a href="https://www.instagram.com/arikcharge/" target="_blank" rel="noopener" aria-label="Instagram">◎</a><a href="https://wa.me/917094050996" target="_blank" rel="noopener" aria-label="WhatsApp">◉</a><p>Fast charging<br>every mile.</p></div><small>© 2026 ArikCharge. All rights reserved.</small></footer>
+<a class="whatsapp-float" href="https://wa.me/918190814593" target="_blank" rel="noopener" aria-label="Chat with ArikCharge on WhatsApp">◉</a>
+<footer><div class="footer-brand"><img src="assets/arikcharge-logo.png" alt="ArikCharge"></div><div class="footer-links"><a href="index.html">Home</a><a href="stations.html">Our Stations</a><a href="solutions.html">Our Solutions</a><a href="index.html#partner">Partner With Us</a><a href="about.html">About</a><a href="contact.html">Contact</a></div><div class="social"><a href="https://www.instagram.com/arikcharge/" target="_blank" rel="noopener" aria-label="Instagram">◎</a><a href="https://wa.me/918190814593" target="_blank" rel="noopener" aria-label="WhatsApp">◉</a><p>Fast charging<br>every mile.</p></div><small>© 2026 ArikCharge. All rights reserved.</small></footer>
 <script src="script.js"></script></body></html>
